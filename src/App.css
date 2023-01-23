@@ -40,8 +40,10 @@
 
 #bot{
   /* margin: auto; */
-  display: inline-block;
- 
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   }
   
 #Bbot{
@@ -51,13 +53,13 @@
 }
 
   #sortBar{
-  position: relative;
-  top:-400px;
+  /* position: relative;
+  top:-400px; */
   border-radius: 5px;
   width: 150px;
   height: 35px;
-  margin-bottom: 10px;
-  }
+  /* margin-bottom: 10px; */
+  } 
   
   ul li{
   list-style-type: none;
@@ -74,4 +76,9 @@ h1{
   font-size: 50px;
   font-style: normal;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.single-card{
+  width: 300px;
+ 
 }

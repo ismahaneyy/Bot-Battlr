@@ -1,16 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BotProvider } from './data/BotsContext';
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BotProvider } from "./data/BotsContext";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* wrapping the app in the provider allows all the components under it to use the context
     of the provider */}
-   <BotProvider>
-    <App />
+    <BotProvider>
+      <App />
     </BotProvider>
   </React.StrictMode>
 );
