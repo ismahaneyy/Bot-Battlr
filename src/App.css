@@ -41,8 +41,15 @@
 #bot{
   /* margin: auto; */
   display: inline-block;
+ 
   }
   
+#Bbot{
+  display: inline-block;
+  background-color: beige;
+
+}
+
   #sortBar{
   position: relative;
   top:-400px;
@@ -58,3 +65,13 @@
   margin-left: 10px;
   margin-right: 10px;
   }
+
+/* *{
+  background-color: bisque;
+} */
+
+h1{
+  font-size: 50px;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+}

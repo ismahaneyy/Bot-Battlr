@@ -40,7 +40,7 @@ armyRender = <h3>Add Bots Please</h3>;
 const unique = [...new Map(myBots.map((m) => [m.id, m])).values()];
 armyRender = unique.map((bot) => {
 return (
-<div onClick={ () => removeBot(bot.name)} id="bot">
+<div onClick={ () => removeBot(bot.name)} id="Bbot">
 <h3 key={bot.name}>{bot.name}</h3>
 <img src={bot.avatar_url} />
 <p>{bot.catchphrase}</p>

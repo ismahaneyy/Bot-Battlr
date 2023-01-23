@@ -15,7 +15,8 @@ function App() {
       -the YourBotArmy component should be rendered here
       */}
       <YourArmyContextProvider>
-      <YourBotArmy/>
+      <h1>Bot Battlr</h1>
+      <YourBotArmy/>   
       <BotCard/>
       <BotCollection/>
       </YourArmyContextProvider>
