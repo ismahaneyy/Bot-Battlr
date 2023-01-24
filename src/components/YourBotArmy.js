@@ -7,14 +7,7 @@ import BotCard from "./BotCard";
 import { BsShieldShaded } from "react-icons/bs";
 import { ImHeartBroken } from "react-icons/im";
 import { BsFillLightningFill } from "react-icons/bs";
-//initial state of empty array
-// is this function called in bot collection??
-//function that sets state
-//if the array is empty...replace it
-//if it isnt...spread and add the element
-//where is the array from???
-// state with an array that provide that will be mapped
-// maps through a list and returns bot cards
+//This component renders bots that a user has selected onto the page 
 function YourBotArmy(props) {
   const { botarmy } = useContext(YourArmyContext);
   const { deletebots } = useContext(YourArmyContext);
@@ -36,6 +29,7 @@ function YourBotArmy(props) {
       setMyBots([...myBots, botArmy]);
     }
   }, [botArmy]);
+  //Removes a bot from users army when the bot is clicked
   function removeBot(name) {
     const removedBot = myBots.filter((bot) => bot.name !== name);
     setMyBots(removedBot);
@@ -54,6 +48,7 @@ function YourBotArmy(props) {
     let deletedBots = myBots.filter((bot)=>{
      return bot.id !== botDelete
     })
+    //Prevents duplication in the YourBotArmy component by filtering out repeated bots 
     const unique = [...new Map(deletedBots?.map((m) => [m.id, m])).values()];
     armyRender = unique.map((bot) => {
       return (

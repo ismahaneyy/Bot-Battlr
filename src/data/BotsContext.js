@@ -4,6 +4,7 @@ import axios from "axios";
 //in the  function below
 const BotContext = createContext();
 //Data that the context will store is defined in this function
+//Its fetches all the data to be used in the application and stores it in context
 const BotProvider = (props) => {
   const [bots, setBots] = useState([]);
   useEffect(() => {

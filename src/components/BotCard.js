@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import { BsShieldShaded } from "react-icons/bs";
 import { ImHeartBroken } from "react-icons/im";
 import { BsFillLightningFill } from "react-icons/bs";
+//This component renders a single BotCard with details from the server 
 function BotCard({ bot ,showSpecs, handleDelete}) {
-  function redner() {
-    let test;
+  function renderBot() {
+    let singleBotCard;
     if (bot === undefined) {
       console.log("loading...");
     } else {
@@ -15,7 +16,7 @@ function BotCard({ bot ,showSpecs, handleDelete}) {
         function getDelete(){
           handleDelete(bot)
         }
-      return (test = (
+      return (singleBotCard = (
         <div onClick={getId} className="single-card">
           <h3>{bot.name}</h3>
           <img src={bot.avatar_url} />
@@ -36,6 +37,6 @@ function BotCard({ bot ,showSpecs, handleDelete}) {
       ));
     }
   }
-  return <>{redner()}</>;
+  return <>{renderBot()}</>;
 }
 export default BotCard;

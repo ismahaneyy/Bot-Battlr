@@ -7,6 +7,7 @@ import YourBotArmy from "./components/YourBotArmy";
 import BotCollection from "./views/BotCollection";
 import { YourArmyContextProvider } from "./data/YourArmyContext";
 import SortBar from "./views/SortBar";
+//This component renders all the main components of the page
 function App() {
   return (
     <div className="App">

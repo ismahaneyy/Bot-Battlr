@@ -1,17 +1,3 @@
-//BotSpecs should be rendered inside this component
-//when a bot card is clicked, its id is passed to the bot specs component
-//the bot specs component uses that id to filter that bot from the list
-//it renders that bot with additional information
-//Bot filter should be rendered inside this component
-//Sort Bar renders inside this component
-//this is a select menu with three options
-//by health, by armor, by damage
-//if a sort option is selected, it sorts the bots i
-//All the Bot cards will be rendered here through map
-//if no classes are selected
-//if some classes are selected
-//run a filter method before rendering
-//checkbox menu
 import React, { useEffect } from "react";
 import { useState, useContext } from "react";
 import BotCard from "../components/BotCard";
@@ -21,6 +7,8 @@ import { YourArmyContext } from "../data/YourArmyContext";
 import SortBar from "./SortBar";
 import BotFilter from "./BotFilter";
 import axios from "axios";
+//This component creates all the bots that are currently in the server using the BotArmy component
+//It also provides functionality to delete the bots and to sort them 
 function BotCollection({}) {
   //get data from BotContext store
   const botsContext = useContext(BotContext);
@@ -30,6 +18,7 @@ function BotCollection({}) {
   const [classStore, setClassStore] = useState([]);
   const { botarmy, deletebots } = useContext(YourArmyContext);
   const [botDelete, setBotDelete] = deletebots;
+  //allows a user to delete a bot from the page persistently
   function handleDelete(bot) {
     axios.delete(`http://localhost:3000/bots/${bot.id}`);
     axios.get("http://localhost:3000/bots").then((d) => {
@@ -57,6 +46,7 @@ function BotCollection({}) {
         setBotDelete([...botDelete, bot.id])
       }
   }
+  //Allows a user to filter the bots according to their clasees
   function filterBots(value) {
     setClassStore([...classStore, value]);
     setBotsFilter(
@@ -79,6 +69,8 @@ function BotCollection({}) {
       })
     );
   }, [classStore]);
+
+  //Allows  a user to sort the bots in BotCollection according to their health,armor or damage
   function sortBots(value) {
     console.log(value);
     if (value === "health") {

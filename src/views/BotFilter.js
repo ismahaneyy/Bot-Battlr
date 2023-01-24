@@ -1,13 +1,15 @@
 import React from "react";
 import { useState } from "react";
+// provides a form that allows the user to select the bots according to their clasess
 function BotFilter({ filterBots }) {
   function handleChange(e) {
     filterBots(e.target.value);
   }
   return (
-    <section>
+    // provides a form that allows the user to select the bots according to their clasess
+    <section >
       <h3>Filter Bots by Classes</h3>
-      <form className="filterForm">
+      <form id="filter-bots">
         <div>
           <label htmlFor="support">Support</label>
           <input
