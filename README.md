@@ -1,6 +1,6 @@
 # Bot-Battlr
 
-- This app fetchs data from a db.json server "". It uses React framework.
+- This app fetchs data from a db.json server "http://localhost:3000/bots". It uses React framework.
 
  - It has the following tables:
 
