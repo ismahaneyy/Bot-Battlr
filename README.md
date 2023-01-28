@@ -1,6 +1,6 @@
 # Bot-Battlr
 
-- Visit the deployed site https://json-server-ismahaneyy.vercel.app/bots
+- Visit the deployed site https://bot-battlr-8gw32em2b-ismahaneyy.vercel.app/
 - This app fetchs data from a db.json server "http://localhost:3000/bots". It uses React framework.
  - It has the following tables:
 
