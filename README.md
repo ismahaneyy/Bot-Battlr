@@ -1,7 +1,7 @@
 # Bot-Battlr
 
+- Visit the deployed site https://json-server-ismahaneyy.vercel.app/bots
 - This app fetchs data from a db.json server "http://localhost:3000/bots". It uses React framework.
-
  - It has the following tables:
 
   - The App table is the main component that is used to house all the components of the page .

@@ -8,13 +8,13 @@ function BotsPage() {
     const [botArmy, setBotArmy] = useState([])
 //fetches data for the bots to be rendered on the page from the server
     useEffect(() => {
-        fetch('https://json-server-vercel-pj78p6g0t-chris-wamae.vercel.app/bots')
+        fetch('https://json-server-ismahaneyy.vercel.app/bots')
             .then(res => res.json())
             .then(data => setBotCollection(data))
     }, [])
 //makes a delete request to the server that results in a bot being deleted from the page
     function deleteBot(bot) {
-        fetch(`https://json-server-vercel-pj78p6g0t-chris-wamae.vercel.app/bots/${bot.id}`, {
+        fetch(`https://json-server-ismahaneyy.vercel.app/bots/${bot.id}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
